@@ -1,0 +1,129 @@
+html{
+    padding-top: 0;
+    margin-top: 0;
+    overflow-x: hidden;
+}
+body{
+    background-color: #c1a57b;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;   
+}
+
+
+h1{
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'Volkhov', serif;
+    color: 	#FAFAD2;
+    margin: 0;
+    
+}
+p1{
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #f3e1e1;
+}
+p{
+    font-family: 'Source Code Pro', monospace ; 
+}
+
+input{
+    height: 30px;
+}
+.showcase{
+    min-height: 160px;
+    max-height: auto;
+    text-align: center;
+}
+.bg-img{
+    position: absolute;
+    background-image: url(bgImg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 160px;
+    max-height: auto;
+    z-index: -1;
+    opacity: 0.58;
+}
+.showcaseText{
+    padding-top: 60px;
+}
+.inputElements{
+    margin-left: 20px;
+}
+input{
+    border-radius:  5px;
+    border-width: 0;
+}
+
+hr {
+    border: dotted #16213e 3px;
+    border-bottom: none;
+    width: 5%;
+    margin: 40px auto;
+  }
+
+.submitBtn{
+    background-color: #980c04;
+    color:#fff;
+    margin:25px 20px 10px;
+    min-width: 25%;
+    max-width: auto;
+    height:40px;
+    border: 0;
+    border-radius: 10px;
+}
+
+.submitBtn:hover{
+    background-color: #6a097d;
+    color: #fff;
+}
+
+#result{
+    display: none;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+#loader{
+    display: none;
+    padding-top: 59px;
+   text-align: center;
+}
+
+.error{
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb
+}
+
+
+@media(min-width:700px){
+
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 30px;
+        column-gap: 100px;
+    }
+
+    .submitBtn{
+        background-color: #980c04;
+        color:#fff;
+        margin:25px 20px 10px;
+        min-width: 10%;
+        max-width: auto;
+        height:40px;
+    }
+}
+
+
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Source+Code+Pro:wght@500&family=Volkhov&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Price Calculator</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="showcase">
+            <div class="bg-img"></div>
+            <div class="showcaseText">
+                <h1>CALCULATE ESTIMATED COST</h1>
+                <p1>Fill the details below.</p1>
+            </div>
+        </div>
+        <form>
+            <section class="inputElements">
+                <div class="grid">
+                    <div>
+                        <h3>Today's gold price</h3>
+                        <input class="goldPrice" type="text" inputmode="numeric" placeholder=" Gold Price" required />
+                    </div>
+                    <div>
+                        <h3>Net weight of ornament</h3>
+                        <input class="totalWeight" type="text" inputmode="numeric" placeholder=" Weight in grams"
+                            required>
+                    </div>
+                    <div>
+                        <h3>Wastage</h3>
+                        <input class="wastage" type="text" inputmode="numeric" placeholder=" Wastage in %" required>
+                    </div>
+                    <div>
+                        <h3>Making Charges</h3>
+                        <input class="makingCharges" type="text" inputmode="numeric" placeholder=" Making Charges in ₹"
+                            required>
+                    </div>
+                    <div>
+                        <h3>Cost of adds-on</h3>
+                        <input class="costOfDeductions" type="text" inputmode="numeric"
+                            placeholder=" Cost of deduction in ₹">
+                    </div>
+                    <div>
+                        <h3>Other Charges(if any)</h3>
+                        <input class="otherCharges" type="text" inputmode="numeric"
+                            placeholder=" Additional charges in ₹">
+                    </div>
+                </div>
+                <hr>
+                <h2>EXCHANGE</h2>
+                <div id="exchangeInpSec">
+                    <div>
+                        <h3>Rate of old gold/gm</h3>
+                        <input class="excGoldPrice" type="text" inputmode="numeric" placeholder=" Gold price/gm">
+                    </div>
+                    <div>
+                        <h3>Net weight of old gold</h3>
+                        <input class="excGoldWeight" type="text" inputmode="numeric" placeholder=" Net Weight of gold">
+                    </div>
+                </div>
+            </section>
+            <div class="btn">
+                <input type="submit" class="submitBtn" value="SUBMIT">
+
+            </div>
+        </form>
+    </div>
+
+    <!-- Loader -->
+    <div id="loader">
+        <img src="Spinner-1s-217px.gif" alt="loading">
+    </div>
+
+    <!-- To be hidden initially-->
+    <div id="result">
+        <p>Today's gold cost/gram = <span id="resGoldPrice"></span></p>
+        <p>Net weight of gold = <span id="resNetWeight"></span> </p>
+        <p>Making Charges = <span id="resMakingCharges"></span> </p>
+        <p>Wastage = <span id="resWastage"></span> </p>
+        <p>Cost of adds-on = <span id="resDeductionAmt"></span></p>
+        <p>Other Charges = <span id="resOtherCharges"></span></p>
+        <p>Total Cost of ornament =  <span id="resTotalAmt"></span></p>
+        <p>Tax amount = <span id="resTaxAmt"></span></p>
+        <div class="dispExchangeInfo">
+            <h5>Exchange details:</h5>
+            <p>Rate of exchanged gold/gm = <span id="resExcGoldPrice"></span></p>
+            <p>Net weight of exchanged gold = <span id="resExcGoldWeight"></span></p>
+            <p>NetWorth of exchanged gold = <span id="resExcGoldWorth"></span></p>
+        </div>
+        <p><strong>Amount to be paid(with Tax) = <span id="resTotalAmtWithTax"></span></strong></p>
+    </div>
+
+</body>
+<script src="app.js"></script>
+
+</html>
